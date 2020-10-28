@@ -1,6 +1,6 @@
 # Androcker - A Docker image for Android security testing
 
-![androcker](https://raw.githubusercontent.com/thirdbyte/androcker/main/androcker.png)
+![androcker](https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.png)
 
 ## Introduction
 
