@@ -44,6 +44,7 @@ This might take variable time depending upon your Internet speed. It pulls the D
 ## Troubleshooting
 
 + Since the container runs with the root user privileges, the files created in the `/root` directory have the owner set to root. On the host Linux distribution, this directory is `/home/androcker`. All the files and sub directories inside `/home/androcker` will require the root user of the host Linux distribution in case any data needs to be written to or deleted from this directory.
++ If you are running the script inside a Linux VM with genymotion installed on the host, put the Linux VM on bridge to `vboxnet0` adapter.
 
 ## Limitations
 
