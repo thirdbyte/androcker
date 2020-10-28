@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Androcker
+Exec=androcker
+Type=Application
+Icon=/usr/local/share/applications/androcker.png
