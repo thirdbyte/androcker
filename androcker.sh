@@ -23,11 +23,11 @@ docker pull scarfaced/androcker:drozer
 
 docker image rm $(docker images -q --filter "dangling=true") &>/dev/null
 
-wget https://raw.githubusercontent.com/thirdbyte/androcker/main/.bashrc && \
+wget https://raw.githubusercontent.com/thirdbyte/androcker/master/.bashrc && \
 mkdir -p /home/androcker && \
 cp .bashrc /home/androcker/.bashrc && \
-wget https://raw.githubusercontent.com/thirdbyte/androcker/main/androcker.desktop && \
-wget https://raw.githubusercontent.com/thirdbyte/androcker/main/androcker.png && \
+wget https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.desktop && \
+wget https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.png && \
 mkdir -p /usr/local/share/applications && \
 cp androcker.desktop /usr/local/share/applications/androcker.desktop && \
 cp androcker.png /usr/local/share/applications/androcker.png && \
