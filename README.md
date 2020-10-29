@@ -6,7 +6,7 @@ Androcker is a silly little script that makes use of [Docker](https://www.docker
 
 ## Technical Details
 
-Androcker pulls a Docker image that uses [Kali Linux](https://www.kali.org/) base image,`kalilinux/kali` and installs `kali-linux-large` metapackage over it. It uses the `kali.download/kali` mirror and `kali-last-snapshot` branch. It also allows you to run GUI applications like `burpsuite`, `jadx`, etc. from within the container by using `--privileged` container capabilities and adding a universal access control to `xhost` on your host Linux distribution. This script creates a `.desktop` file (the Application Launcher) for you that initiates the `docker run` command to run the container. So, the only thing you need to do is, execute `androcker`. You'll have access to a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications. Also, contrary to virtual machines, that are either networked behind a virtual NAT or bridged along with the host operating system, Androcker utilizes the host network stack as it is (using `--net=host`) which means that the Androcker container will have direct access to all the network interfaces as your host Linux distribution and will also share the same IP address.
+Androcker pulls a Docker image that uses [Kali Linux](https://www.kali.org/) base image,`kalilinux/kali` and installs `kali-linux-large` metapackage over it. It uses the `kali.download/kali` mirror and `kali-last-snapshot` branch. It also allows you to run GUI applications like `jadx-gui` from within the container by using `--privileged` container capabilities and adding a universal access control to `xhost` on your host Linux distribution. This script creates a `.desktop` file (the Application Launcher) for you that initiates the `docker run` command to run the container. So, the only thing you need to do is, execute `androcker`. You'll have access to a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications. Also, contrary to virtual machines, that are either networked behind a virtual NAT or bridged along with the host operating system, Androcker utilizes the host network stack as it is (using `--net=host`) which means that the Androcker container will have direct access to all the network interfaces as your host Linux distribution and will also share the same IP address.
 
 ## Prerequisites
 + Docker (User must be in the `docker` group)
@@ -22,19 +22,18 @@ This might take variable time depending upon your Internet speed. It pulls the D
 
 1. Fire up a terminal.
 2. Execute `androcker`.
-3. Launch any tool by executing them using their respective package names. For an example: `frida`, `burpsuite`, `jadx-gui`, etc.
+3. Launch any tool by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, etc.
 4. You can save any file in the `/root` directory inside the container and find it at `/home/androcker` on your host Linux distribution.
 
 ## Tools
 
 1. **jadx** : Execute `jadx-gui` 
 2. **apktool** : Execute `apktool`
-3. **burpsuite** : Execute `burpsuite`
-4. **adb** : Execute `adb`
-5. **frida** : Execute `frida`
-6. **dex2jar** : Execute `objection`
-7. **drozer** : Execute `drozer <genymotion-device-ipv4>` (Eg. drozer 192.168.56.105)
-8. **mobsf** : Execute `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105)
+3. **adb** : Execute `adb`
+4. **frida** : Execute `frida`
+5. **dex2jar** : Execute `objection`
+6. **drozer** : Execute `drozer <genymotion-device-ipv4>` (Eg. drozer 192.168.56.105)
+7. **mobsf** : Execute `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105)
 
 ## Troubleshooting
 
