@@ -30,5 +30,4 @@ mkdir -p /usr/local/bin && \
 echo "xhost +local:root && docker run -it --rm --shm-size=4g --workdir=/root --hostname=androcker --net=host --privileged -e DISPLAY -v /var/run/docker.sock:/var/run/docker.sock -v /home/androcker:/root scarfaced/androcker:androcker /bin/bash && xhost -local:root" > /usr/local/bin/androcker && \
 chmod +x /usr/local/bin/androcker && \
 cd /tmp && \
-rm -rf /tmp/androcker && \
-rm -rf /tmp/androcker.sh
+rm -rf /tmp/androcker
