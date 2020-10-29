@@ -35,11 +35,11 @@ This might take variable time depending upon your Internet speed. It pulls the D
 3. **apktool** : Execute `apktool`
 4. **burpsuite** : Execute `burpsuite`
 5. **firefox-esr** : Execute `firefox`
-6. **adb** : Execute `adb` to use the binaries from the Kali Linux repositories. Alternatively, use `adb-pt` to use the latest platform-tools binaries.
+6. **adb** : Execute `adb`
 7. **frida** : Execute `frida`
 8. **dex2jar** : Execute `objection`
-9. **drozer** : Execute `drozer`. This would actually run `adb forward tcp:31415 tcp:31415 && drozer console connect`
-10. **mobsf** : Execute `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105).
+9. **drozer** : Execute `drozer <genymotion-device-ipv4>` (Eg. drozer 192.168.56.105)
+10. **mobsf** : Execute `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105)
 
 ## Troubleshooting
 
