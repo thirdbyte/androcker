@@ -14,7 +14,7 @@ Androcker pulls a Docker image that uses [Kali Linux](https://www.kali.org/) bas
 
 ## Installation
 
-`mkdir -p /tmp/androcker && wget https://raw.githubusercontent.com/thirdbyte/androcker/main/install.sh -O /tmp/androcker/install.sh && chmod +x /tmp/androcker/install.sh && sudo /tmp/androcker/./install.sh`
+`mkdir -p /tmp/androcker && wget https://raw.githubusercontent.com/thirdbyte/androcker/master/install.sh -O /tmp/androcker/install.sh && chmod +x /tmp/androcker/install.sh && sudo /tmp/androcker/./install.sh`
 
 This might take variable time depending upon your Internet speed. It pulls the Docker images from Docker Hub that weighs around 4G.
 
@@ -47,7 +47,7 @@ This might take variable time depending upon your Internet speed. It pulls the D
 
 ## Uninstallation
 
-`mkdir -p /tmp/androcker && wget https://raw.githubusercontent.com/thirdbyte/androcker/main/uninstall.sh -O /tmp/androcker/uninstall.sh && chmod +x /tmp/androcker/uninstall.sh && sudo /tmp/androcker/./uninstall.sh`
+`mkdir -p /tmp/androcker && wget https://raw.githubusercontent.com/thirdbyte/androcker/master/uninstall.sh -O /tmp/androcker/uninstall.sh && chmod +x /tmp/androcker/uninstall.sh && sudo /tmp/androcker/./uninstall.sh`
 
 ## And...
 
