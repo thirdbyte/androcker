@@ -45,6 +45,10 @@ This might take variable time depending upon your Internet speed. It pulls the D
 + Androcker uses Docker's `--privileged` container capabilities and `--net=host` networking. It also adds a universal access control to `xhost` for making GUI applications work, but immidiately closes it once Androcker is exited. This might allow any application to access the X server or GUI of your host Linux distribution in particular for the time Androcker is running which can be a security or a privacy concern for many.
 + Audio ouput does not work as of now.
 
+## Uninstallation
+
+`mkdir -p /tmp/androcker && wget https://raw.githubusercontent.com/thirdbyte/androcker/main/uninstall.sh -O /tmp/androcker/uninstall.sh && chmod +x /tmp/androcker/uninstall.sh && sudo /tmp/androcker/./uninstall.sh`
+
 ## And...
 
 This script was created out of curiosity. This might solve a lot of problems. This might create new ones as well. It comes with no commitments whatsoever. You may do anything you wish to do with this script and are solely responsible for it. You can still feel free to file issues in case you experience any of them. Cheers!
