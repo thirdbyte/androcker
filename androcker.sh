@@ -26,13 +26,8 @@ docker image rm $(docker images -q --filter "dangling=true") &>/dev/null
 wget https://raw.githubusercontent.com/thirdbyte/androcker/master/.bashrc && \
 mkdir -p /home/androcker && \
 cp .bashrc /home/androcker/.bashrc && \
-wget https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.desktop && \
-wget https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.png && \
-mkdir -p /usr/local/share/applications && \
-cp androcker.desktop /usr/local/share/applications/androcker.desktop && \
-cp androcker.png /usr/local/share/applications/androcker.png && \
 mkdir -p /usr/local/bin && \
-echo "xhost +local:root && docker run --rm --shm-size=4g --workdir=/root --hostname=androcker --net=host --privileged -e DISPLAY -v /var/run/docker.sock:/var/run/docker.sock -v /home/androcker:/root scarfaced/androcker:androcker terminator && xhost -local:root" > /usr/local/bin/androcker && \
+echo "xhost +local:root && docker run -it --rm --shm-size=4g --workdir=/root --hostname=androcker --net=host --privileged -e DISPLAY -v /var/run/docker.sock:/var/run/docker.sock -v /home/androcker:/root scarfaced/androcker:androcker /bin/bash && xhost -local:root" > /usr/local/bin/androcker && \
 chmod +x /usr/local/bin/androcker && \
 cd /tmp && \
 rm -rf /tmp/androcker && \
