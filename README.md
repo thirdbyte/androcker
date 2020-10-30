@@ -4,10 +4,6 @@
 
 Androcker is a silly little script that makes use of [Docker](https://www.docker.com/) and sets up a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications.
 
-## Technical Details
-
-Androcker pulls a Docker image that uses [Kali Linux](https://www.kali.org/) base image,`kalilinux/kali` and installs `kali-linux-large` metapackage over it. It uses the `kali.download/kali` mirror and `kali-last-snapshot` branch. It also allows you to run GUI applications like `jadx-gui` from within the container by using `--privileged` container capabilities and adding a universal access control to `xhost` on your host Linux distribution. This script creates a `.desktop` file (the Application Launcher) for you that initiates the `docker run` command to run the container. So, the only thing you need to do is, execute `androcker`. You'll have access to a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications. Also, contrary to virtual machines, that are either networked behind a virtual NAT or bridged along with the host operating system, Androcker utilizes the host network stack as it is (using `--net=host`) which means that the Androcker container will have direct access to all the network interfaces as your host Linux distribution and will also share the same IP address.
-
 ## Prerequisites
 + Docker (User must be in the `docker` group)
 + Internet connection
@@ -16,13 +12,13 @@ Androcker pulls a Docker image that uses [Kali Linux](https://www.kali.org/) bas
 
 `curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/install.sh | sudo bash`
 
-This might take variable time depending upon your Internet speed. It pulls the Docker images from Docker Hub that weighs around 4G.
+This might take variable time depending upon your Internet speed. It pulls the Docker images from Docker Hub that weighs around 3.5G.
 
 ## Usage
 
 1. Fire up a terminal.
 2. Execute `androcker`.
-3. Launch any tool by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, etc.
+3. Launch tools listed below by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, etc.
 4. You can save any file in the `/root` directory inside the container and find it at `/home/androcker` on your host Linux distribution.
 
 ## Tools
