@@ -23,13 +23,14 @@ This might take variable time depending upon your Internet speed. It pulls the D
 
 ## Tools
 
-1. **jadx** : Execute `jadx-gui` 
-2. **apktool** : Execute `apktool`
-3. **adb** : Execute `adb`
-4. **frida** : Execute `frida`
-5. **dex2jar** : Execute `objection`
-6. **drozer** : Execute `drozer <genymotion-device-ipv4>` (Eg. drozer 192.168.56.105)
-7. **mobsf** : Execute `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105)
+1. jadx
+2. apktool
+3. adb
+4. dex2jar
+5. frida
+6. objection
+7. drozer - `drozer <genymotion-device-ipv4>` (Eg. drozer 192.168.56.105)
+8. mobsf - `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105)
 
 ## Troubleshooting
 
