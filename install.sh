@@ -28,5 +28,5 @@ echo "xhost +local:root && docker run -it --rm --shm-size=4g --workdir=/root --h
 chmod +x $HOME/.local/bin/androcker && \
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc && \
 cd /tmp && \
-rm -rf /tmp/androcker && \
+rm -rf /tmp/androcker
 docker image rm $(docker images -q --filter "dangling=true") &>/dev/null
