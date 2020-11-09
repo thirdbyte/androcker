@@ -5,8 +5,10 @@
 Androcker is a silly little script that makes use of [Docker](https://www.docker.com/) and sets up a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications.
 
 ## Prerequisites
-+ Docker (User must be in the `docker` group)
-+ Internet connection
+## Prerequisites
++ Internet.
++ `curl`, `wget` & `iputils-ping` must be installed.
++ Docker must be installed and the user must be present in the `docker` group.
 
 ## Installation
 
