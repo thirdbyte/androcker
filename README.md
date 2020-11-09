@@ -10,7 +10,7 @@ Androcker is a silly little script that makes use of [Docker](https://www.docker
 
 ## Installation
 
-`curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/install.sh | sudo bash`
+`curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/install.sh | bash`
 
 This might take variable time depending upon your Internet speed. It pulls the Docker images from Docker Hub that weighs around 3.5G.
 
@@ -43,7 +43,8 @@ This might take variable time depending upon your Internet speed. It pulls the D
 
 ## Uninstallation
 
-`curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/uninstall.sh | sudo bash`
+1. `curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/uninstall.sh | bash`
+2. `sudo rm -rf $HOME/.androcker`
 
 ## And...
 
