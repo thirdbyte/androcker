@@ -129,4 +129,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias burpsuite='java -jar /usr/bin/burpsuite'
+adb connect $GENY
+clear
