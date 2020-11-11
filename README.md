@@ -8,7 +8,7 @@ Androcker is a silly little script that makes use of [Docker](https://www.docker
 + Internet.
 + `curl`, `wget` & `iputils-ping` must be installed.
 + Docker must be installed and the user must be present in the `docker` group.
-+ Genymotion must be installed.
++ Genymotion must be installed. A device must be created with drozer agent and frida server installed. 
 
 ## Installation
 
