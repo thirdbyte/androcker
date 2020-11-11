@@ -5,38 +5,41 @@
 Androcker is a silly little script that makes use of [Docker](https://www.docker.com/) and sets up a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications.
 
 ## Prerequisites
-## Prerequisites
 + Internet.
 + `curl`, `wget` & `iputils-ping` must be installed.
 + Docker must be installed and the user must be present in the `docker` group.
++ Genymotion must be installed.
 
 ## Installation
 
-`curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/install.sh | bash`
++ `curl -sL https://raw.githubusercontent.com/thirdbyte/androcker/master/install.sh | bash`
 
-This might take variable time depending upon your Internet speed. It pulls the Docker images from Docker Hub that weighs around 3.5G.
+(This takes variable time depending upon your Internet speed. It pulls the Docker images from Docker Hub that weighs around 3.5G.)
+
++ Reboot.
 
 ## Usage
 
+1. Start your Genymotion device and note down the IPv4 address from the title bar.
 1. Fire up a terminal.
-2. Execute `androcker`.
-3. Launch tools listed below by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, etc.
-4. You can save any file in the `/root` directory inside the container and find it at `/home/androcker` on your host Linux distribution.
+2. Execute `androcker <genymotion-ipv4-address>`.
+3. Launch tools listed below by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, `mobsf`, `drozer`, etc.
+4. You can save any file in the `/root` directory inside the container and find it at `$HOME/.androcker` on your host Linux distribution.
 
 ## Tools
 
-1. jadx
+1. jadx/jadx-gui
 2. apktool
 3. adb
 4. dex2jar
 5. frida
 6. objection
-7. drozer - `drozer <genymotion-device-ipv4>` (Eg. drozer 192.168.56.105)
-8. mobsf - `mobsf <genymotion-device-ipv4>` (Eg. mobsf 192.168.56.105)
+7. drozer
+8. mobsf
 
 ## Troubleshooting
 
-+ Since the container runs with the root user privileges, the files created in the `/root` directory have the owner set to root. On the host Linux distribution, this directory is `/home/androcker`. All the files and sub directories inside `/home/androcker` will require the root user of the host Linux distribution in case any data needs to be written to or deleted from this directory.
++ Since the container runs with the root user privileges, the files created in the `/root` directory have the owner set to root. On the host Linux distribution, this directory is `$HOME/.androcker`. All the files and sub directories inside `$HOME/.androcker` will require the root user of the host Linux distribution in case any data needs to be written to or deleted from this directory.
 
 ## Limitations
 
