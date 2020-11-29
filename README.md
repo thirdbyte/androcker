@@ -32,10 +32,11 @@ Androcker is a silly little script that makes use of [Docker](https://www.docker
 2. apktool
 3. adb
 4. dex2jar
-5. frida
-6. objection
-7. drozer
-8. mobsf
+5. jarsigner
+6. frida
+7. objection
+8. drozer
+9. mobsf
 
 ## Troubleshooting
 
