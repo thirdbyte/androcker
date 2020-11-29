@@ -24,7 +24,7 @@ wget https://raw.githubusercontent.com/thirdbyte/androcker/master/.bashrc && \
 mkdir -p $HOME/.androcker && \
 cp .bashrc $HOME/.androcker/.bashrc && \
 mkdir -p $HOME/.local/bin && \
-echo 'xhost +local:root && docker run -it --rm --shm-size=4g --workdir=/root --hostname=androcker --net=host --privileged -e DISPLAY -e GENY=$1 -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.androcker:/root scarfaced/androcker:androcker /bin/bash && xhost -local:root' > $HOME/.local/bin/androcker && \
+echo 'xhost +local:root && docker run -it --rm --shm-size=4g --workdir=/root --hostname=androcker --net=host --privileged -e DISPLAY -e GENY=$1 -e EHOME=$HOME -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.androcker:/root scarfaced/androcker:androcker /bin/bash && xhost -local:root' > $HOME/.local/bin/androcker && \
 chmod +x $HOME/.local/bin/androcker && \
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc && \
 cd /tmp && \
