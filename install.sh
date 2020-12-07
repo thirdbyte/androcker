@@ -23,6 +23,12 @@ docker pull scarfaced/androcker:drozer && \
 wget https://raw.githubusercontent.com/thirdbyte/androcker/master/.bashrc && \
 mkdir -p $HOME/.androcker && \
 cp .bashrc $HOME/.androcker/.bashrc && \
+wget https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.desktop && \
+mkdir -p $HOME/.local/share/applications && \
+cp androcker.desktop $HOME/.local/share/applications/androcker.desktop && \
+wget https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.png && \
+mkdir -p $HOME/.icons && \
+cp androcker.png $HOME/.icons/androcker.png && \
 mkdir -p $HOME/.local/bin && \
 echo 'xhost +local:root && docker run --rm --shm-size=4g --workdir=/root --hostname=androcker --net=host --privileged -e DISPLAY -e GENY=$1 -e AHOME=$HOME -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.androcker:/root scarfaced/androcker:androcker terminator && xhost -local:root' > $HOME/.local/bin/androcker && \
 chmod +x $HOME/.local/bin/androcker && \
