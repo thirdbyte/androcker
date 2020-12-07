@@ -1,5 +1,7 @@
 # Androcker - A Docker image for Android security testing
 
+![androcker](https://raw.githubusercontent.com/thirdbyte/androcker/master/androcker.png)
+
 ## Introduction
 
 Androcker is a silly little script that makes use of [Docker](https://www.docker.com/) and sets up a hand full of useful tools and frameworks that are pretty popular for their use in testing Android applications.
@@ -21,9 +23,10 @@ Androcker is a silly little script that makes use of [Docker](https://www.docker
 ## Usage
 
 1. Start your Genymotion device and note down the IPv4 address from the title bar. Make sure that drozer agent and frida server are installed and running.
-2. Fire up a terminal.
-3. Execute `androcker <genymotion-ipv4-address>`.
-4. Launch tools listed below by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, `mobsf`, `drozer`, etc.
+2. Access the application drawer/menu on your Linux distribution to find Androcker.
+2. Launch Androcker.
+3. A `terminator` terminal will pop up.
+4. Use this terminal to launch any tool by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, `mobsf`, `drozer` etc.
 5. You can save any file in the `/root` directory inside the container and find it at `$HOME/.androcker` on your host Linux distribution.
 
 ## Tools
