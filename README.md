@@ -23,9 +23,8 @@ Androcker is a silly little script that makes use of [Docker](https://www.docker
 1. Start your Genymotion device and note down the IPv4 address from the title bar. Make sure that drozer agent and frida server are installed and running.
 2. Fire up a terminal.
 3. Execute `androcker <genymotion-ipv4-address>`.
-4. A `terminator` terminal will pop up.
-5. Use this terminal to launch any tool by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, `mobsf`, `drozer` etc.
-6. You can save any file in the `/root` directory inside the container and find it at `$HOME/.androcker` on your host Linux distribution.
+4. Launch tools listed below by executing them using their respective package names. For an example: `frida`, `apktool`, `jadx-gui`, `mobsf`, `drozer`, etc.
+5. You can save any file in the `/root` directory inside the container and find it at `$HOME/.androcker` on your host Linux distribution.
 
 ## Tools
 
